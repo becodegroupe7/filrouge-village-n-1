@@ -3,24 +3,19 @@
 /*--- Bloc Logo ---*/
 .logo {
   text-align: center;
-  margin-bottom: 2%;
-}
+  margin-bottom: 2%; }
 
 /*--- Bloc Carrousel ---*/
 .carrousel {
   min-height: 400px;
   background-color: #A5D8D3;
-  font-family: "Asap", sans-serif;
-}
-.carrousel a {
-  text-decoration: none;
-}
-.carrousel h3 {
-  margin-top: 3%;
-}
-.carrousel img {
-  text-align: center;
-}
+  font-family: "Asap", sans-serif; }
+  .carrousel a {
+    text-decoration: none; }
+  .carrousel h3 {
+    margin-top: 3%; }
+  .carrousel img {
+    text-align: center; }
 
 /*--- Bloc Intro ---*/
 .intro {
@@ -31,98 +26,78 @@
   padding-top: 5%;
   padding-bottom: 5%;
   font-family: "Asap", sans-serif;
-  color: white;
-}
-.intro h4 {
-  margin-top: 2%;
-}
+  color: white; }
+  .intro h4 {
+    margin-top: 2%; }
 
 /*--- Bloc Picto Valeur ---*/
 .valeur, .valeurelem {
   text-align: center;
   margin: auto;
   height: 100%;
-  font-family: "Asap", sans-serif;
-}
+  font-family: "Asap", sans-serif; }
 
 .valeurelem {
-  padding: 3% 0;
-}
-.valeurelem:nth-child(2n) {
-  background-color: #A5D8D3;
-}
+  padding: 3% 0; }
+  .valeurelem:nth-child(2n) {
+    background-color: #A5D8D3; }
 
 /*--- Bloc Métiers/Entreprise ---*/
 .metiers, .entreprise, .proximite {
   height: 400px;
   color: #2D9CDB;
   text-align: center;
-  line-height: 10px;
-}
-.metiers h4, .entreprise h4, .proximite h4 {
-  font-family: "Asap", sans-serif;
-  padding-top: 15%;
-  padding-bottom: 3%;
-  margin: auto;
-  font-size: 40px;
-  font-weight: bold;
-}
+  line-height: 10px; }
+  .metiers h4, .entreprise h4, .proximite h4 {
+    font-family: "Asap", sans-serif;
+    padding-top: 15%;
+    padding-bottom: 3%;
+    margin: auto;
+    font-size: 40px;
+    font-weight: bold; }
 
 .entreprise {
-  background-color: #4F4F4F;
-}
+  background-color: #4F4F4F; }
 
 .proximite {
-  background-color: #333333;
-}
+  background-color: #333333; }
 
 /*--- Bloc Sponsors ---*/
 .sponsors {
   text-align: center;
-  height: 100%;
-}
-.sponsors img {
-  margin-left: 2%;
-}
+  height: 100%; }
+  .sponsors img {
+    margin-left: 2%; }
 
 /*--- Bloc Newsletter ---*/
 .newsletter {
   height: 500px;
-  background-color: #A5D8D3;
-}
-.newsletter .row .left, .newsletter .row .right {
-  height: 100%;
-}
-.newsletter .row .left {
-  margin-top: 2%;
-  text-align: center;
-}
-.newsletter .row .left .col h4 {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-.newsletter .row .left .col img {
-  height: 300px;
-  width: 500px;
-}
-.newsletter .right {
-  margin-top: 10%;
-}
-.newsletter .right form {
-  margin-right: 10%;
-}
-.newsletter .right form input, .newsletter .right form select {
-  font-size: 20px;
-  height: 40px;
-  width: 65%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.newsletter .right form input.submit {
-  padding-bottom: 5%;
-  color: white;
-  background-color: #214452;
-}
+  background-color: #A5D8D3; }
+  .newsletter .row .left, .newsletter .row .right {
+    height: 100%; }
+  .newsletter .row .left {
+    margin-top: 2%;
+    text-align: center; }
+    .newsletter .row .left .col h4 {
+      font-size: 25px;
+      margin-bottom: 20px; }
+    .newsletter .row .left .col img {
+      height: 300px;
+      width: 500px; }
+  .newsletter .right {
+    margin-top: 10%; }
+    .newsletter .right form {
+      margin-right: 10%; }
+      .newsletter .right form input, .newsletter .right form select {
+        font-size: 20px;
+        height: 40px;
+        width: 65%;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+      .newsletter .right form input.submit {
+        padding-bottom: 5%;
+        color: white;
+        background-color: #214452; }
 
 /*--- Bloc Footer ---*/
 .footer {
@@ -130,7 +105,6 @@
   text-align: center;
   color: white;
   font-family: "Asap", sans-serif;
-  background-color: #214452;
-}
+  background-color: #214452; }
 
 /*# sourceMappingURL=style.css.map */
