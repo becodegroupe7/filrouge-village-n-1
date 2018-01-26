@@ -36,3 +36,6 @@ Un grand manque de clarté et d'accessibilité. Trop d'informations qui sautent 
 - Développer le site en React/Meteor.
 ## UML
 ![UML](https://contattafiles.s3-us-west-1.amazonaws.com/tnt14094/Xeij2dbt2EiGf72/filrouge.png "UML")
+## Dev's note
+- Web hosting is InfinityFree.net
+- DB hosting FreeMySQLHosting.net
