@@ -18,17 +18,18 @@ if (!empty($_POST)) {
     $orga = htmlspecialchars(addslashes($_POST["Organisation"]));
     $mail = htmlspecialchars(addslashes($_POST["Mail"]));
     // conf
-    $dbhost = "sql206.epizy.com";
-    $dbname = "epiz_21482364_village";
-    $dbuser = "epiz_21482364";
-    $dbpass = "lovelace7";
+    $dbhost = "sql2.freemysqlhosting.net";
+    $dbname = "sql2217929";
+    $dbuser = "sql2217929";
+    $dbpass = "vR5*cZ6%";
     $table = "newsletter";
     // connect
-    $dbh = new PDO('mysql:host='.$dbhost.';dbname='.$dbname, $dbuser, $dbpass);
     try {
+      $dbh = new PDO('mysql:host='.$dbhost.';dbname='.$dbname, $dbuser, $dbpass);
       // exec 
-      $feedback = "Succès";
-      $dbh->exec('INSERT INTO '.$table.' (username,organisation,mail) VALUES ('.$name.','.$orga.','.$mail.')');
+      $query = $dbh->prepare('INSERT INTO '.$table.' (username,organisation,mail) VALUES ("'.$name.'","'.$orga.'","'.$mail.'")');
+      $query->execute();
+      $feedback = "Inscription réussie";
     }
     catch(Exception $e) {
       $feedback = "Erreur de requête";
@@ -167,12 +168,12 @@ if (!empty($_POST)) {
     </div>
     <div class="col-md-6 right">
       <div class="row">
-        <?php 
-          if (isset($feedback)) {
-            echo "<p>".$feedback."</p>";
-          }
-        ?>
         <form id="mailform" action="./index.php#newsletter" method="post">
+           <?php 
+              if (isset($feedback)) {
+                echo "<p>".$feedback."</p>";
+              }
+            ?>
           <input type="text" name="Name" placeholder="Nom complet">
           <select class="select" name="Organisation">
             <option value="Entreprise">Entreprise</option>
