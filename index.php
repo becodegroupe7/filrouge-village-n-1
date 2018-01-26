@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <?php
-$user = epiz_21482364;
-$pass = lovelace7;
-$dbh = new PDO('mysql:host=sql206.epizy.com;dbname=epiz_21482364_village', $user, $pass);
-if(
-    ( isset($_POST["Name"]) ) && ( isset($_POST["Organisation"]) ) && ( isset($_POST["Mail"]) )
-  ) { echo "oui";
+if (!empty($_POST)) {
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  
+  if(
+    ( isset($_POST["Name"]) ) && 
+    ( isset($_POST["Organisation"]) ) && 
+    ( isset($_POST["Mail"]) ) &&
+    ( filter_var($_POST["Mail"], FILTER_VALIDATE_EMAIL) )
+  ) 
+  { 
+    $feedback = "Tentative d'envoi en cours... ";
+    // secure
+    $name = htmlspecialchars(addslashes($_POST["Name"]));
+    $orga = htmlspecialchars(addslashes($_POST["Organisation"]));
+    $mail = htmlspecialchars(addslashes($_POST["Mail"]));
+    // conf
+    $dbhost = "sql206.epizy.com";
+    $dbname = "epiz_21482364_village";
+    $dbuser = "epiz_21482364";
+    $dbpass = "lovelace7";
+    $table = "newsletter";
+    // connect
+    $dbh = new PDO('mysql:host='.$dbhost.';dbname='.$dbname, $dbuser, $dbpass);
     try {
-     $dbh->execute('INSERT INTO newsletter (`nom d\'utilisateur`, `organisation`, `mail`) VALUES (`'.$_POST["Name"].'`, `'.$_POST["Organisation"].'`, `'.$_POST["Mail"].'`)');
+      // exec 
+      $feedback = "Succès";
+      $dbh->exec('INSERT INTO '.$table.' (username,organisation,mail) VALUES ('.$name.','.$orga.','.$mail.')');
     }
+    catch(Exception $e) {
+      $feedback = "Erreur de requête";
+    }
+  } else {
+    $feedback = "Erreur de formulaire";
   }
+} else {
+  $feedback = "Inscrivez-vous";
+}
+
 ?>
 <html lang="en">
 <head>
@@ -137,14 +167,19 @@ if(
     </div>
     <div class="col-md-6 right">
       <div class="row">
-        <form action="./index.php" method="post">
+        <?php 
+          if (isset($feedback)) {
+            echo "<p>".$feedback."</p>";
+          }
+        ?>
+        <form id="mailform" action="./index.php#newsletter" method="post">
           <input type="text" name="Name" placeholder="Nom complet">
           <select class="select" name="Organisation">
             <option value="Entreprise">Entreprise</option>
             <option value="Proximité">Proximité</option>
           </select>
-          <input type="text" name="Mail" placeholder="E-Mail">
-          <input class="submit" type="submit" name="Subscrive" value="Souscrire">
+          <input id="mailinput" type="mail" name="Mail" placeholder="Mail">
+          <input id="mailsend" class="submit" type="submit" name="Subscrive" value="Souscrire">
         </form>
       </div>
     </div>
