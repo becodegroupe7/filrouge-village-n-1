@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*--- Variables ---*/
+/*--- Bloc Logo ---*/
+.logo {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+/*--- Bloc Carrousel ---*/
+.carrousel {
+  min-height: 600px;
+  background-color: #A5D8D3;
+  font-family: "Asap", sans-serif;
+}
+
+/*--- Bloc Intro ---*/
+.intro {
+  height: 300px;
+  background-color: #214452;
+  text-align: center;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: "Asap", sans-serif;
+  color: white;
+}
+.intro h4 {
+  margin-top: 2%;
+}
+
+/*--- Bloc Picto Valeur ---*/
+.valeur, .valeurelem {
+  text-align: center;
+  margin: auto;
+  height: 100%;
+  font-family: "Asap", sans-serif;
+}
+
+.valeurelem {
+  padding: 3% 0;
+}
+.valeurelem:nth-child(2n) {
+  background-color: #A5D8D3;
+}
+
+/*--- Bloc Métiers/Entreprise ---*/
+.metiers, .entreprise, .proximite {
+  height: 400px;
+  color: #2D9CDB;
+  text-align: center;
+  line-height: 10px;
+}
+.metiers h4, .entreprise h4, .proximite h4 {
+  font-family: "Asap", sans-serif;
+  padding-top: 15%;
+  padding-bottom: 3%;
+  margin: auto;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.entreprise {
+  background-color: #4F4F4F;
+}
+
+.proximite {
+  background-color: #333333;
+}
+
+/*--- Bloc Sponsors ---*/
+.sponsors {
+  text-align: center;
+  height: 200px;
+}
+.sponsors img {
+  margin-left: 2%;
+}
+
+/*--- Bloc Newsletter ---*/
+.newsletter {
+  height: 500px;
+}
+.newsletter .row .left, .newsletter .row .right {
+  height: 100%;
+}
+.newsletter .row .left {
+  margin-top: 2%;
+  text-align: center;
+}
+.newsletter .row .left .col h4 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.newsletter .row .left .col img {
+  height: 300px;
+  width: 500px;
+}
+.newsletter .right {
+  margin-top: 5%;
+}
+.newsletter .right form {
+  text-align: center;
+}
+.newsletter .right form input, .newsletter .right form select {
+  text-align: center;
+  font-size: 30px;
+  height: 45px;
+  width: 60%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.newsletter .right form input.submit {
+  padding-bottom: 5%;
+  color: white;
+  background-color: #214452;
+}
+
+.footer {
+  height: 200px;
+  background-color: #214452;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `newsletter`;
 CREATE TABLE IF NOT EXISTS `newsletter` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `nom d'utilisateur` text NOT NULL,
+  `username` text NOT NULL,
   `organisation` varchar(10) NOT NULL,
   `mail` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)

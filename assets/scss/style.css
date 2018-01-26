@@ -7,9 +7,15 @@
 
 /*--- Bloc Carrousel ---*/
 .carrousel {
-  min-height: 600px;
+  min-height: 400px;
   background-color: #A5D8D3;
   font-family: "Asap", sans-serif; }
+  .carrousel a {
+    text-decoration: none; }
+  .carrousel h3 {
+    margin-top: 3%; }
+  .carrousel img {
+    text-align: center; }
 
 /*--- Bloc Intro ---*/
 .intro {
@@ -59,42 +65,46 @@
 /*--- Bloc Sponsors ---*/
 .sponsors {
   text-align: center;
-  height: 200px; }
+  height: 100%; }
   .sponsors img {
     margin-left: 2%; }
 
 /*--- Bloc Newsletter ---*/
 .newsletter {
-  height: 500px; }
+  height: 500px;
+  background-color: #A5D8D3; }
   .newsletter .row .left, .newsletter .row .right {
     height: 100%; }
   .newsletter .row .left {
     margin-top: 2%;
     text-align: center; }
     .newsletter .row .left .col h4 {
-      font-size: 35px;
+      font-size: 25px;
       margin-bottom: 20px; }
     .newsletter .row .left .col img {
       height: 300px;
       width: 500px; }
   .newsletter .right {
-    margin-top: 5%; }
+    margin-top: 10%; }
     .newsletter .right form {
-      text-align: center; }
+      margin-right: 10%; }
       .newsletter .right form input, .newsletter .right form select {
-        text-align: center;
-        font-size: 30px;
-        height: 45px;
-        width: 60%;
-        margin-top: 15px;
-        margin-bottom: 15px; }
+        font-size: 20px;
+        height: 40px;
+        width: 65%;
+        margin-top: 10px;
+        margin-bottom: 10px; }
       .newsletter .right form input.submit {
         padding-bottom: 5%;
         color: white;
         background-color: #214452; }
 
+/*--- Bloc Footer ---*/
 .footer {
-  height: 200px;
+  height: 25px;
+  text-align: center;
+  color: white;
+  font-family: "Asap", sans-serif;
   background-color: #214452; }
 
 /*# sourceMappingURL=style.css.map */

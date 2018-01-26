@@ -177,20 +177,28 @@ if (!empty($_POST)) {
       </div>
     </div>
     <div class="col-md-6 right">
-      <div class="col">
+      <div class="row">
         <?php
           if (isset($feedback)) {
             echo "<p>".$feedback."</p>";
           }
         ?>
         <form id="mailform" action="./index.php#newsletter" method="post">
+          <label for="Votre nom:">
             <input type="text" name="Name" placeholder="Nom complet">
+          </label>
+          <label for="L'organisation souhaité">
             <select class="select" name="Organisation">
               <option value="Entreprise">Entreprise</option>
               <option value="Proximité">Proximité</option>
             </select>
+          </label>
+          <label for="Votre mail">
             <input id="mailinput" type="mail" name="Mail" placeholder="Mail">
-          <input id="mailsend" class="submit" type="submit" name="Subscrive" value="Souscrire">
+          </label>
+          <label>
+            <input id="mailsend" class="submit" type="submit" name="Subscrive" value="Souscrire">
+          </label>
         </form>
       </div>
     </div>

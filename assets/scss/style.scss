@@ -1,6 +1,7 @@
 /*--- Variables ---*/
 $font: 'Asap', sans-serif;
 $bleu-clair: #A5D8D3;
+$bleu-fonce: #214452;
 
 /*--- Bloc Logo ---*/
 .logo {
@@ -10,15 +11,24 @@ $bleu-clair: #A5D8D3;
 
 /*--- Bloc Carrousel ---*/
 .carrousel {
-	min-height: 600px;
+	min-height: 400px;
 	background-color: $bleu-clair;
 	font-family: $font;
+	a {
+		text-decoration: none;
+	}
+	h3 {
+		margin-top: 3%;
+	}
+	img {
+		text-align: center;
+	}
 }
 
 /*--- Bloc Intro ---*/
 .intro {
 	height: 300px;
-	background-color: #214452;
+	background-color: $bleu-fonce;
 	text-align: center;
 	margin: auto;
 	padding-top: 5%;
@@ -75,7 +85,7 @@ $bleu-clair: #A5D8D3;
 /*--- Bloc Sponsors ---*/
 .sponsors {
 	text-align: center;
-	height: 200px;
+	height: 100%;
 	img {
 		margin-left: 2%;
 	}
@@ -84,6 +94,7 @@ $bleu-clair: #A5D8D3;
 /*--- Bloc Newsletter ---*/
 .newsletter {
 	height: 500px;
+	background-color: $bleu-clair;
 	.row {
 		.left, .right {
 			height: 100%;
@@ -93,7 +104,7 @@ $bleu-clair: #A5D8D3;
 			text-align: center;
 			.col {
 				h4 {
-					font-size: 35px;
+					font-size: 25px;
 					margin-bottom: 20px;
 				}
 				img {
@@ -104,27 +115,30 @@ $bleu-clair: #A5D8D3;
 		}
 	}
 	.right {
-		margin-top: 5%;
+		margin-top: 10%;
 		form {
-			text-align: center;
+			margin-right: 10%;
 			input, select {
-				text-align: center;
-				font-size: 30px;
-				height: 45px;
-				width: 60%;
-				margin-top: 15px;
-				margin-bottom: 15px;
+				font-size: 20px;
+				height: 40px;
+				width: 65%;
+				margin-top: 10px;
+				margin-bottom: 10px;
 			}
 			input.submit {
 				padding-bottom: 5%;
 				color: white;
-				background-color: #214452;
+				background-color: $bleu-fonce;
 			}
 		}
 	}
 }
 
+/*--- Bloc Footer ---*/
 .footer {
-	height: 200px;
-	background-color: #214452;
+	height: 25px;
+	text-align: center;
+	color: white;
+	font-family: $font;
+	background-color: $bleu-fonce;
 }
